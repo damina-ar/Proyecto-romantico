@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semana Cumpleañera</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- MATRIX -->
+<canvas id="matrix"></canvas>
+
+<!-- MUSICA -->
+<audio id="music" autoplay loop>
+<source src="music/lofi.mp3" type="audio/mp3">
+</audio>
+
+<!-- TERMINAL -->
+<div class="terminal">
+<span id="typed"></span>
+</div>
+
+
+
+<header>
+<nav>
+<div class="logo">Semana Cumple 💻</div>
+
+<div class="menu">
+<a href="index.html">Inicio</a>
+<a href="dia1.html">Día 1</a>
+<a href="#">Día 2</a>
+<a href="#">Día 3</a>
+<a href="#">Día 4</a>
+<a href="#">Día 5</a>
+<a href="#">Día 6</a>
+<a href="#">Día 7</a>
+</div>
+
+</nav>
+</header>
+
+<div class="music-control">
+<button onclick="toggleMusic()">🎧 Música</button>
+</div>
+
+<section class="hero">
+<h1>Bienvenido a la celebración de tu cumpleaños durante toda esta semana</h1>
+<p>Tu cumpleaños nunca será un día más 💙. Espero sacarte muchas sonrisas con este detalle amor. </p>
+</section>
+
+
+<section class="galeria">
+<h2>Mi amorcito de niño</h2>
+
+<div class="carousel">
+
+<button class="arrow left" onclick="scrollGallery(-1)">❮</button>
+
+<div class="netflix-row" id="gallery">
+
+<img src="img/foto1.jpeg">
+<img src="img/foto2.jpeg">
+<img src="img/foto3.jpeg">
+<img src="img/foto4.jpg">
+<img src="img/foto5.jpeg">
+<img src="img/foto6.jpeg">
+<img src="img/foto7.jpeg">
+<img src="img/foto8.jpeg">
+
+</div>
+
+<button class="arrow right" onclick="scrollGallery(1)">❯</button>
+
+</div>
+</section>
+
+<div class="terminal">
+Pista: intenta escribir algo bonito... 💙
+</div>
+
+<div class="terminal">
+> Pista:: son 5 letras...
+</div>
+
+<div class="terminal">
+> Pista:: empieza con "t" 😏
+</div>
+
+<section class="hobbies">
+<h2>Sus hobbies</h2>
+
+<div class="hobby-grid">
+
+<div class="hobby">
+<img src="img/hobby1.jpeg">
+<span>💻 Comer juntos</span>
+<p> Comer juntos</p>
+</div>
+
+<div class="hobby">
+<img src="img/hobby2.jpeg">
+<span>🎮 Amarme</span>
+<p> Amarme</p>
+</div>
+
+<div class="hobby">
+<img src="img/hobby3.jpeg">
+<span>📺 Darme besos</span>
+<p> Darme besos</p>
+
+</div>
+
+<div class="hobby">
+<img src="img/hobby4.jpeg">
+<span>⚙️ Ser mi compañero de aventuras</span>
+<p> Ser mi compañero de aventuras</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Sus cualidades</h2>
+<div class="cards">
+<div class="card">💙 Inteligente y muy capaz</div>
+<div class="card">💻 Hombre que resuelve y el mejor en lo que hace</div>
+<div class="card">😄 Risueño y amable</div>
+<div class="card">✨ Gracioso con sentido del humor particular xd</div>
+</div>
+</section>
+
+<!-- CONTADOR -->
+<div class="contador">
+Faltan <span id="countdown"></span> para tu gran día 🎂
+</div>
+
+<!-- JUEGO SECRETO -->
+<div id="game" style="display:none; text-align:center; padding:40px;">
+<h2>Mini juego: Atrapa el corazón 💙</h2>
+<button id="heartBtn">💙</button>
+<p id="score">Puntos: 0</p>
+</div>
+
+
+<footer>
+<p>
+Hecha con mucho amor por el amor de tu vida, espero sacarte una sonrisa y sorprenderte estos días.  
+Bienvenido a la celebración de tu nacimiento, no es un día cualquiera para mí ni para los que te queremos.  
+Te amo mucho mi vida 💙
+</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

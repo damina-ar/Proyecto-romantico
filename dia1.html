@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="romantico">
+
+    <header>
+        <nav>
+            <div class="logo">Día 1 💌</div>
+            <div class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="dia1.html">Día 1</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="dia">
+
+        <h1 class="titulo-dia">Día 1 — Tu niñez 💙</h1>
+        <p class="subtitulo-dia">Hoy recordamos al niño que se robó mi corazón</p>
+
+        <img src="img/nino.jpeg" class="img-dia">
+
+        <!-- CARTA -->
+        <button class="btn-romantico" onclick="mostrarCarta()">Abrir mensaje de amor 💌</button>
+
+        <div id="carta" class="carta" style="display:none;">
+            Hoy quiero volver al inicio…
+            al niño que soñaba, reía y crecía sin saber
+            que algún día se convertiría en el amor de mi vida.
+
+            Gracias por existir, por ser tú,
+            y por dejarme acompañarte en esta historia.
+
+            Te amo muchísimo 💙
+        </div>
+
+
+        <div class="grid-romantico">
+
+            <div class="bloque">
+
+                <h2 class="titulo-seccion">Raspa para descubrir tu carta secreta</h2>
+
+                <div class="scratch-container">
+                    <img src="img/qr.png" class="qr-img">
+                    <canvas id="scratchQR" width="250" height="250"></canvas>
+                </div>
+
+            </div>
+
+
+            <div class="bloque">
+
+                <h2 class="titulo-seccion">Actividad del día</h2>
+
+                <div class="scratch-container">
+
+                    <div class="actividad-oculta">
+                        🎬 Ver una película juntos
+                    </div>
+
+                    <canvas id="scratchActividad" width="250" height="250"></canvas>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="ruleta" id="ruleta" style="display:none;">
+
+                <h2 class="titulo-seccion">Elige la película</h2>
+
+                <div class="ruleta-container">
+
+                    <div class="flecha">▼</div>
+
+                    <div class="wheel" id="wheel">
+                        <span style="--i:1">Shrek 💚</span>
+                        <span style="--i:2">Toy Story 🤠</span>
+                        <span style="--i:3">La princesa y el sapo 🍌</span>
+                        <span style="--i:4">Doraemon 🔵</span>
+                        <span style="--i:5">Como entrenar a mi dragón🌱</span>
+                        <span style="--i:6">Dragon Ball ⚡</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="btn-romantico" onclick="girar()">Girar ruleta 🎡</button>
+
+            <p id="resultado"></p>
+
+        </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+<footer>
+<p>
+Este primer día quería decirte lo orgullosa que estoy de ti y el lugar importante que ocupas en mi vida. Te deseo todo lo mejor, que Dios te colme de bendiciones y espero seas muy feliz. 
+Te amo mucho mi vida 💙
+</p>
+</footer>
+
+</html>
