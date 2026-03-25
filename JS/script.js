@@ -223,16 +223,7 @@ ctx.fillText("Raspa aquí 💕",40,130);
 let isDrawing=false;
 let scratched=0;
 
-canvas.addEventListener("mousedown",()=> isDrawing=true);
-canvas.addEventListener("mouseup",()=> isDrawing=false);
-
-canvas.addEventListener("mousemove",(e)=>{
-if(!isDrawing) return;
-
-const rect=canvas.getBoundingClientRect();
-const x=e.clientX-rect.left;
-const y=e.clientY-rect.top;
-
+function scratch(x,y){
 ctx.globalCompositeOperation="destination-out";
 ctx.beginPath();
 ctx.arc(x,y,20,0,Math.PI*2);
@@ -244,6 +235,43 @@ if(scratched>80 && callback){
 callback();
 callback=null;
 }
+}
+
+// MOUSE
+canvas.addEventListener("mousedown",()=> isDrawing=true);
+canvas.addEventListener("mouseup",()=> isDrawing=false);
+
+canvas.addEventListener("mousemove",(e)=>{
+if(!isDrawing) return;
+
+const rect=canvas.getBoundingClientRect();
+const x=e.clientX-rect.left;
+const y=e.clientY-rect.top;
+
+scratch(x,y);
+});
+
+// TOUCH (CELULAR)
+canvas.addEventListener("touchstart",(e)=>{
+isDrawing=true;
+});
+
+canvas.addEventListener("touchend",()=>{
+isDrawing=false;
+});
+
+canvas.addEventListener("touchmove",(e)=>{
+if(!isDrawing) return;
+
+e.preventDefault();
+
+const rect=canvas.getBoundingClientRect();
+const touch = e.touches[0];
+
+const x=touch.clientX-rect.left;
+const y=touch.clientY-rect.top;
+
+scratch(x,y);
 });
 }
 crearScratch("scratchQR");
