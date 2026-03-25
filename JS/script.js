@@ -208,6 +208,7 @@ heart.remove();
 }
 
 function crearScratch(id, callback){
+
 const canvas = document.getElementById(id);
 if(!canvas) return;
 
@@ -223,10 +224,18 @@ ctx.fillText("Raspa aquí 💕",40,130);
 let isDrawing=false;
 let scratched=0;
 
+function getPos(e){
+const rect = canvas.getBoundingClientRect();
+return {
+x: e.clientX - rect.left,
+y: e.clientY - rect.top
+};
+}
+
 function scratch(x,y){
 ctx.globalCompositeOperation="destination-out";
 ctx.beginPath();
-ctx.arc(x,y,20,0,Math.PI*2);
+ctx.arc(x,y,22,0,Math.PI*2);
 ctx.fill();
 
 scratched++;
@@ -237,43 +246,24 @@ callback=null;
 }
 }
 
-// MOUSE
-canvas.addEventListener("mousedown",()=> isDrawing=true);
-canvas.addEventListener("mouseup",()=> isDrawing=false);
-
-canvas.addEventListener("mousemove",(e)=>{
-if(!isDrawing) return;
-
-const rect=canvas.getBoundingClientRect();
-const x=e.clientX-rect.left;
-const y=e.clientY-rect.top;
-
-scratch(x,y);
-});
-
-// TOUCH (CELULAR)
-canvas.addEventListener("touchstart",(e)=>{
+// POINTER EVENTS (mouse + touch)
+canvas.addEventListener("pointerdown",(e)=>{
 isDrawing=true;
+const pos = getPos(e);
+scratch(pos.x,pos.y);
 });
 
-canvas.addEventListener("touchend",()=>{
-isDrawing=false;
-});
-
-canvas.addEventListener("touchmove",(e)=>{
+canvas.addEventListener("pointermove",(e)=>{
 if(!isDrawing) return;
-
-e.preventDefault();
-
-const rect=canvas.getBoundingClientRect();
-const touch = e.touches[0];
-
-const x=touch.clientX-rect.left;
-const y=touch.clientY-rect.top;
-
-scratch(x,y);
+const pos = getPos(e);
+scratch(pos.x,pos.y);
 });
+
+canvas.addEventListener("pointerup",()=> isDrawing=false);
+canvas.addEventListener("pointerleave",()=> isDrawing=false);
+
 }
+
 crearScratch("scratchQR");
 
 crearScratch("scratchActividad",()=>{
