@@ -526,3 +526,7 @@ z-index:2;
 cursor:pointer;
 border-radius:15px;
 }
+
+canvas{
+touch-action:none;
+}
