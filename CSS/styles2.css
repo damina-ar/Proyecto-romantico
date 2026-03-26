@@ -318,9 +318,10 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 .grid-chistes{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:20px;
-max-width:700px;
+gap:25px;
+max-width:750px;
 margin:30px auto;
+align-items:stretch;
 }
 
 /* FLIP CARDS */
@@ -333,10 +334,11 @@ cursor:pointer;
 .card-inner{
 position:relative;
 width:100%;
-height:120px;
+min-height:150px;
 transition:transform .6s;
 transform-style:preserve-3d;
 }
+
 
 .card-chiste.flip .card-inner{
 transform:rotateY(180deg);
