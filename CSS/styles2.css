@@ -8,6 +8,42 @@ padding:15px 30px;
 border-bottom:1px solid rgba(0,255,255,0.2);
 }
 
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-weight:bold;
+font-size:20px;
+color:#00f5ff;
+text-shadow:0 0 10px #00f5ff;
+}
+
+/* TOOLBAR TECH */
+.menu{
+display:flex;
+gap:10px;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+padding:10px 16px;
+border-radius:10px;
+transition:.3s;
+border:1px solid transparent;
+}
+
+.menu a:hover{
+background:rgba(0,255,255,0.1);
+border:1px solid #00f5ff;
+box-shadow:0 0 10px #00f5ff;
+transform:translateY(-2px);
+}
+
+
 .dia2{
 background:
 radial-gradient(circle at 20% 20%, rgba(255,182,193,0.3) 0%, transparent 40%),
