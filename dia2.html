@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Día 2 - Amor divertido</title>
+
+<link rel="stylesheet" href="CSS/styles.css">
+<script defer src="JS/script.js"></script>
+
+</head>
+
+<body class="dia2">
+
+<header>
+        <nav>
+            <div class="logo">Día 2 💌</div>
+            <div class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="dia1.html">Día 1</a>
+            </div>
+        </nav>
+    </header>
+
+<!-- SIDEBAR -->
+<div class="sidebar-dia2">
+<a href="#galeria">😂 Momentos</a>
+<a href="#chistes">🤣 Chistes</a>
+<a href="#tickets">🎁 Premio</a>
+<a href="#sorpresa">🎟️ QR</a>
+</div>
+
+<h1 class="titulo-dia">Día 2 😂</h1>
+
+<p class="mensaje-dia">
+El amor también es reír juntos...  
+y contigo no paro nunca 🤭💙
+
+</p>
+
+<!-- VIDEO -->
+<section class="video-section card section">
+<video controls class="video-dia2">
+<source src="video/video2.mp4" type="video/mp4">
+</video>
+</section>
+
+<!-- GALERIA -->
+<!-- GALERIA -->
+<section id="galeria" class="galeria-divertida card-seccion">
+
+<h2>Momentos que me hacen reír contigo</h2>
+<p>Confirmado: contigo no se puede estar serio 😂💕</p>
+
+<div class="slider-galeria">
+
+<button class="flecha-galeria izquierda" id="prevGaleria">❮</button>
+
+<div class="contenedor-galeria">
+
+<img src="img/2foto1.jpg" class="foto-click">
+<img src="img/2foto2.jpg" class="foto-click">
+<img src="img/2foto3.PNG" class="foto-click">
+<img src="img/2foto4.jpeg" class="foto-click">
+<img src="img/2foto5.jpg" class="foto-click">
+<img src="img/2foto6.jpg" class="foto-click">
+<img src="img/2foto7.jpg" class="foto-click">
+<img src="img/2foto8.jpg" class="foto-click">
+<img src="img/2foto9.jpg" class="foto-click">
+<img src="img/2foto10.jpg" class="foto-click">
+<img src="img/2foto11.jpg" class="foto-click">
+<img src="img/2foto12.jpg" class="foto-click">
+<img src="img/2foto13.jpg" class="foto-click">
+<img src="img/2foto14.jpg" class="foto-click">
+
+</div>
+
+<button class="flecha-galeria derecha" id="nextGaleria">❯</button>
+
+</div>
+
+</section>
+
+<section id="chistes" class="seccion-divertida card-seccion">
+
+<h2> Bueno, las risas no faltaron😂</h2>
+
+<div class="grid-chistes">
+
+<div class="card-chiste">
+<div class="card-inner">
+<div class="card-front">Dale la vuelta 😏</div>
+<div class="card-back">¿Qué le dijo la tostadora a la rebanada de pan? "Te quiero dentro de mí".✨</div>
+</div>
+</div>
+
+
+<div class="card-chiste">
+<div class="card-inner">
+<div class="card-front">Dale la vuelta 😏</div>
+<div class="card-back">¿Eres café? Porque me quitas el sueño ☕😏</div>
+</div>
+</div>
+
+<div class="card-chiste">
+<div class="card-inner">
+<div class="card-front">Dale la vuelta 😎</div>
+<div class="card-back">¿Qué le dice una taza a otra? ¿Qué taza siendo?
+
+</div>
+</div>
+</div>
+
+<div class="card-chiste">
+<div class="card-inner">
+<div class="card-front">Dale la vuelta 😏</div>
+<div class="card-back">Creo que necesito lentes… porque solo te veo a ti 🤓💙</div>
+</div>
+</div>
+
+<div class="card-chiste">
+<div class="card-inner">
+<div class="card-front">Dale la vuelta 🤭</div>
+<div class="card-back">¿Qué le dice una impresora a otra? Esta hoja es tuya o es impresión mía.</div>
+</div>
+</div>
+
+<div class="card-chiste">
+<div class="card-inner">
+<div class="card-front">Dale la vuelta 😜</div>
+<div class="card-back">¿Sabes programar? Porque cuando te veo se ejecuta mi corazón 💻❤️</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="card-seccion">
+
+<h2>🎮 Gana tu premio</h2>
+<p>Haz clic 5 veces al corazón</p>
+
+<div id="juegoCorazon">❤️</div>
+
+<div id="ticketsOcultos" style="display:none;">
+
+<h2>🎁 Te ganaste lo siguiente</h2>
+
+
+<div class="slider-tickets">
+
+<button class="flecha-ticket izq" id="prevTicket">❮</button>
+
+<div class="contenedor-tickets" id="contenedorTickets">
+
+<img src="img/ticket1.png" class="ticket">
+<img src="img/ticket2.png" class="ticket">
+<img src="img/ticket3.png" class="ticket">
+<img src="img/ticket4.png" class="ticket">
+<img src="img/ticket5.png" class="ticket">
+<img src="img/ticket6.png" class="ticket">
+<img src="img/ticket7.png" class="ticket">
+<img src="img/ticket8.png" class="ticket">
+
+</div>
+
+<button class="flecha-ticket der" id="nextTicket">❯</button>
+
+</div>
+
+</section>
+
+<!-- SCRATCH QR -->
+<section id="sorpresa" class="scratch-section card-seccion ">
+
+<h2>Raspa tu sorpresa 🎟️</h2>
+
+<div class="scratch-container">
+<img src="img/qr2.png" class="contenido-oculto">
+
+<canvas id="scratchQR2" width="240" height="240"></canvas>
+</div>
+
+<p class="texto-qr">
+Escanea el código después de raspar 🤭
+</p>
+
+</section>
+
+<!-- MODAL -->
+<div id="modalImg" class="modal">
+<span class="cerrar">&times;</span>
+<img class="modal-contenido" id="imgGrande">
+</div>
+
+</body>
+
+<footer>
+<p>
+Este día quería recordarte que contigo no solo amo, también me divierto.  
+Gracias por cada risa, cada momento tonto y cada locura juntos.  
+Te amo mucho mi vida 💙
+</p>
+</footer>
+
+</html>
