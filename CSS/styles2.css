@@ -9,21 +9,20 @@ border-bottom:1px solid rgba(0,255,255,0.2);
 }
 
 nav{
-display:flex;
+display: flex;
 justify-content:space-between;
-align-items:center;
+align-items: center;
 }
 
 .logo{
-font-weight:bold;
+font-weight: bold;
 font-size:20px;
 color:#00f5ff;
 text-shadow:0 0 10px #00f5ff;
 }
 
 .romantico{
-background:url("../img/fondo-dia1.png");
-background-size:cover;
+background-size: cover;
 background-position:center;
 background-attachment:fixed;
 position:relative;
@@ -46,15 +45,15 @@ gap:10px;
 }
 
 .menu a{
-text-decoration:none;
-color:white;
+text-decoration: none;
+color: white;
 padding:10px 16px;
 border-radius:10px;
 transition:.3s;
 border:1px solid transparent;
 }
 
-.menu a:hover{
+.menu a: hover{
 background:rgba(0,255,255,0.1);
 border:1px solid #00f5ff;
 box-shadow:0 0 10px #00f5ff;
