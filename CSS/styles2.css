@@ -21,8 +21,10 @@ color:#00f5ff;
 text-shadow:0 0 10px #00f5ff;
 }
 
+
 .romantico{
-background-size: cover;
+background:url("../img/fondo-dia1.png");
+background-size:cover;
 background-position:center;
 background-attachment:fixed;
 position:relative;
@@ -59,6 +61,9 @@ border:1px solid #00f5ff;
 box-shadow:0 0 10px #00f5ff;
 transform:translateY(-2px);
 }
+
+/****** DIA 2*/
+/************** DIA 2 **************/
 
 
 .dia2{
@@ -525,3 +530,5 @@ transition:.2s;
 #juegoCorazon:hover{
 transform:scale(1.2);
 }
+
+
