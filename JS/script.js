@@ -339,3 +339,105 @@ girando=false;
 },4000);
 
 }
+
+/************* DIA 2 *************/
+
+/* MODAL IMAGEN */
+document.querySelectorAll(".foto-click").forEach(img=>{
+img.addEventListener("click",()=>{
+document.getElementById("modalImg").style.display="flex";
+document.getElementById("imgGrande").src=img.src;
+});
+});
+
+document.querySelector(".cerrar").onclick=function(){
+document.getElementById("modalImg").style.display="none";
+};
+
+/* SCRATCH */
+crearScratch("scratchQR2");
+
+/* SCROLL SIDEBAR */
+document.querySelectorAll('.sidebar-dia2 a').forEach(link=>{
+link.addEventListener('click',function(e){
+e.preventDefault();
+
+const target = document.querySelector(this.getAttribute('href'));
+
+if(target){
+target.scrollIntoView({
+behavior:'smooth'
+});
+}
+});
+});
+
+/* CHISTES FLIP */
+document.querySelectorAll(".card-chiste").forEach(card=>{
+card.addEventListener("click",()=>{
+card.classList.toggle("flip");
+});
+});
+
+/* MINIJUEGO */
+let clicks = 0;
+const corazon = document.getElementById("corazonJuego");
+const tickets = document.getElementById("ticketsContainer");
+
+if(corazon){
+corazon.addEventListener("click",()=>{
+clicks++;
+
+corazon.style.transform="scale(1.3)";
+setTimeout(()=>{
+corazon.style.transform="scale(1)";
+},150);
+
+if(clicks >= 5){
+tickets.style.display="block";
+corazon.style.display="none";
+}
+});
+}
+
+/* SLIDER TICKETS */
+const contenedorTickets = document.getElementById("contenedorTickets");
+
+document.getElementById("nextTicket").onclick = ()=>{
+contenedorTickets.scrollBy({left:260,behavior:"smooth"});
+};
+
+document.getElementById("prevTicket").onclick = ()=>{
+contenedorTickets.scrollBy({left:-260,behavior:"smooth"});
+};
+
+
+/* SLIDER GALERIA */
+
+const galeria = document.querySelector(".contenedor-galeria");
+
+document.getElementById("nextGaleria").addEventListener("click",()=>{
+galeria.scrollBy({left:220,behavior:"smooth"});
+});
+
+document.getElementById("prevGaleria").addEventListener("click",()=>{
+galeria.scrollBy({left:-220,behavior:"smooth"});
+});
+
+let contador = 0;
+const juego = document.getElementById("juegoCorazon");
+const ticketsBox = document.getElementById("ticketsOcultos");
+
+if(juego){
+juego.addEventListener("click",()=>{
+contador++;
+
+juego.style.transform="scale(1.3)";
+setTimeout(()=>juego.style.transform="scale(1)",150);
+
+if(contador>=5){
+juego.style.display="none";
+ticketsBox.style.display="block";
+}
+});
+}
