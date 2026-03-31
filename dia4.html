@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 4</title>
+    <link rel="stylesheet" href="CSS/styles4.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="dia1.html">Día 1</a>
+            <a href="dia2.html">Día 2</a>
+            <a href="dia3.html">Día 3</a>
+            <a href="dia4.html">Día 4</a>
+            <a href="dia5.html">Día 5</a>
+        </nav>
+
+        <div class="music-player">
+            <button id="playPause">▶️</button>
+        </div>
+    </header>
+
+    <div class="corazones"></div>
+
+    <!-- PANTALLA FECHA -->
+    <!-- PANTALLA FECHA -->
+    <section id="pantallaFecha">
+
+        <div class="fecha-contenedor">
+        <h2 style="text-align: center;">Bienvenido mi vida 💕</h2>
+
+         
+            <div class="corazon-lock" id="corazonLock">
+
+                <img class="corazon-img" src="https://cdn-icons-png.flaticon.com/512/833/833472.png">
+
+                <div class="contenido-corazon">
+
+                    <input type="date" id="fechaImportante">
+
+                    <button class="btn-confirmar" onclick="validarFecha()">
+                        Desbloquear 💖
+                    </button>
+
+                </div>
+                
+
+            </div>
+   <h3 class="titulo-fecha">
+                Elige la fecha más importante para ti
+            </h3>
+
+        </div>
+
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="formulario" class="oculto">
+        <div class="form-grid">
+
+            <div class="form-col">
+
+                <h2>Cuéntame más de ti</h2>
+
+                <input placeholder="¿Como te gusta que te diga de cariño?" id="apodo">
+                <input placeholder="Comida favorita" id="comida">
+                <input placeholder="Donde nos vimos por primera vez" id="pose">
+                <input placeholder="Lugar que quieres conocer" id="lugar">
+                <input placeholder="Qué quieres hacer en tu cumpleaños" id="cumple">
+
+                <button onclick="guardarRespuestas()">Continuar</button>
+            </div>
+
+            <div class="respuestas">
+                <h3>Tus respuestas ❤️</h3>
+                <ul id="listaRespuestas"></ul>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SELECCION PUZZLE -->
+    <section id="seleccionPuzzle" class="oculto">
+
+        <h2 style="text-align: center;">Elige el recuerdo que quieres armar 🧩</h2>
+
+
+        <div class="opcionesPuzzle">
+
+            <img src="img/puzzle/111.jpg" onclick="seleccionarPuzzle(this)">
+            <img src="img/puzzle/222.jpeg" onclick="seleccionarPuzzle(this)">
+            <img src="img/puzzle/333.jpeg" onclick="seleccionarPuzzle(this)">
+            <img src="img/puzzle/444.jpg" onclick="seleccionarPuzzle(this)">
+
+        </div>
+
+    </section>
+
+    <!-- PUZZLE -->
+<section id="rompecabezas" class="oculto">
+        <h2 style="text-align: center;">Arma el rompecabezas amor :3</h2>
+        <div class="puzzle-contenedor">
+
+            <div id="puzzle"></div>
+
+            <div class="guia">
+                <h3>Guía</h3>
+                <img id="imagenGuia">
+                <button class="btn-completado" onclick="verificarPuzzleBoton()">Completado ✅</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FINAL -->
+    <section id="final" class="oculto">
+
+        <div class="final-grid">
+
+            <div class="suenos">
+                <h3>Escribe tus anhelos y sueños más importantes</h3>
+
+                <textarea id="suenosTexto"></textarea>
+                <button onclick="mostrarSuenos()">Enviar</button>
+
+                <div id="resultado"></div>
+            </div>
+
+            <div class="carta">
+                <h3 style="text-align: center;">Carta del día 💌</h3>
+
+                <div class="scratch-card">
+                    <canvas id="scratch"></canvas>
+                    <img src="img/qr/qr4.png" class="qr">
+                </div>
+
+            </div>
+
+
+
+
+    </section>
+
+    <footer>
+        Recuerda que eres capaz de hacer todo lo que te pronpongas. Eres inteligente, eres capaz y eres muy valiente. Sigue tus sueños y enseñale al mundo como brillar ❤️.
+    </footer>
+
+    <audio id="musica" loop>
+        <source src="music/musica2.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="JS/script4.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Día 3</title>
+<link rel="stylesheet" href="CSS/styles3.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="dia1.html">Día 1</a>
+        <a href="dia2.html">Día 2</a>
+        <a href="dia3.html">Día 3</a>
+        <a href="dia4.html">Día 4</a>
+        <a href="dia5.html">Día 5</a>
+
+    </nav>
+
+    <div class="music-player">
+    <button id="playPause">▶️</button>
+</div>
+</header>
+
+<main>
+
+<div class="stars"></div>
+<div class="shooting-stars"></div>
+
+<section class="intro" id="intro">
+    <h1 id="mensaje1">
+        Bienvenido al tercer día, espero te haya gustado lo que has visto hasta ahora porque se vienen cositas 💫
+    </h1>
+
+    <div id="pregunta" class="hidden">
+        <p>Aquí te envío mi dosis de amor diario ¿Quieres verla?</p>
+
+        <div class="botones">
+            <button id="si">Sí ❤️</button>
+            <button id="no">No</button>
+        </div>
+    </div>
+</section>
+
+<section id="fotos" class="hidden">
+    <div class="contenedor-fotos" id="contenedorFotos"></div>
+</section>
+
+<section class="opciones hidden" id="opciones">
+
+    <div class="columna">
+        <button id="abrirLibro">Libro Virtual 📖</button>
+
+    </div>
+
+    <div class="columna">
+        <button id="abrirCarta">Carta 💌</button>
+    </div>
+
+</section>
+
+
+<section id="libro" class="hidden libro-section">
+
+<div class="titulo-libro">
+❤️ Nuestro Libro de Amor ❤️
+</div>
+        <p class="texto-romantico">
+            Estos son los dibujitos que nos hacíamos y nos hacían sentir un poco cerca en la distancia
+        </p>
+
+<div class="libro-container">
+
+<button id="prev-btn">❮</button>
+
+<div class="libro">
+<img id="book-image" src="">
+<div id="page-number"></div>
+</div>
+
+<button id="next-btn">❯</button>
+
+</div>
+
+<div id="dots-container"></div>
+
+</section>
+
+<section id="carta" class="hidden">
+    <div class="scratch-card">
+        <canvas id="scratch"></canvas>
+        <img src="img/qr/qr3.png" class="qr">
+    </div>
+</section>
+
+</main>
+
+
+
+<footer class="footer-romantico">
+<p>Hecho con ❤️ para la persona que me hace cambiar de animo en un segundo xd que lo amo mucho.  Gracias por existir, por hacer mis días más bonitos y por ser la razón de tantas sonrisas.</p>
+<p class="firma">Siempre tú y yo ✨</p>
+</footer>
+
+<audio id="musica" loop>
+    <source src="music/2.mp3" type="audio/mp3">
+</audio>
+
+<script src="JS/script3.js"></script>
+
+
+</body>
+</html>

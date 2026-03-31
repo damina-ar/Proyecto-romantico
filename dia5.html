@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <link rel="stylesheet" href="CSS/styles5.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="dia1.html">Día 1</a>
+            <a href="dia2.html">Día 2</a>
+            <a href="dia3.html">Día 3</a>
+            <a href="dia4.html">Día 4</a>
+            <a href="dia5.html">Feliz cumpleaños</a>
+
+        </nav>
+        <div class="music-player">
+            <button id="playPause"> Ponle play ▶️</button>
+        </div>
+    </header>
+
+    <section id="seccion-inicio">
+        <div id="cuenta-regresiva">
+            <h1 id="numero">3</h1>
+            <button onclick="iniciarSorpresa()">Empezar Sorpresa</button>
+        </div>
+
+        <div id="mensaje-principal" class="oculto">
+            <h2>Feliz cumpleaños mi vida, te amo con todo mi corazón y espero tengas un hermoso día ❤️</h2>
+            <div class="corazon-galeria">
+                <img src="img/nino.jpeg" alt="Foto 1">
+                <img src="img/cumple2.jpg" alt="Foto 2">
+                <img src="img/cumple1.jpg" alt="Foto 3">
+                <img src="img/2foto5.jpg" alt="Foto 4">
+            </div>
+            <p class="instruccion" onclick="irAlViaje()">👇 Desliza o haz clic aquí 👇</p>
+    </section>
+
+    <section id="seccion-viaje" class="oculto">
+        <h2 id="texto-viaje">Iniciamos el viaje a tu niñez... 🚀</h2>
+        <button id="btn-viaje" onclick="iniciarViajeDinamico()">Despegar</button>
+
+        <div id="contenedor-viaje-dinamico" class="oculto"></div>
+
+        <h2 id="mensaje-final-viaje" class="oculto">Te mereces todo lo bonito de la vida. Disfruta de las cosas pequeñas y agradece lo que tienes. Gracias por formar parte de nuestras vidas.
+    </section>
+
+    <section id="seccion-pastel" class="oculto">
+        <h2>¡Pide un deseo! 🎂</h2>
+
+        </div>
+        <div class="contenedor-pastel">
+            <img src="img/pastel-gigante.gif" alt="Pastel" class="img-pastel">
+            <div id="flama" class="flama-vela" onclick="apagarVela()">🔥</div>
+        </div>
+    </section>
+
+    <section id="seccion-regalo" class="oculto">
+        <h2>Ábrelo cuando estés listo 🎁</h2>
+
+        <div class="menu-sorpresas">
+            <button onclick="mostrarSorpresa('video')">📹 Video</button>
+            <button onclick="mostrarSorpresa('carta')">💌 Carta</button>
+            <button onclick="mostrarSorpresa('mensajes')">💬 Mensajes de amor</button>
+            <button onclick="mostrarSorpresa('regalo')">🎁 Regalo</button>
+        </div>
+
+        <div id="sorpresa-video" class="sorpresa-contenido oculto">
+            <h3>Un video especial para ti</h3>
+            <video id="video-cumple" controls width="100%" max-width="500px">
+                <source src="video/videocumple.mp4" type="video/mp4">
+            </video>
+        </div>
+
+<div id="sorpresa-carta" class="sorpresa-contenido oculto">
+            <h3>¡Feliz cumpleaños mi amor!</h3>
+            <div class="scratch-card">
+                <canvas id="scratch"></canvas>
+                <img src="img/qr/qr5.jpg" class="qr">
+            </div>
+            
+            <button onclick="abrirModalRegalo('img/qr/qr5.jpg')" style="margin-top: 20px; background: #ffb3c6; color: #05050a; font-weight: bold; box-shadow: 0 4px 10px rgba(255, 179, 198, 0.4);">🔍 Ver en grande</button>
+            
+        </div>
+
+        <div id="sorpresa-mensajes" class="sorpresa-contenido oculto">
+            <h3>Palabras desde el corazón</h3>
+            <div class="grid-mensajes">
+                <div class="tarjeta-mensaje">
+                    <h4>👩‍👦 Mamá</h4>
+                    <p>"Hijo mío, estoy tan orgullosa del hombre en el que te has convertido. Feliz cumpleaños hijo❤️
+                        que Dios te bendiga y te cuide siempre te quiero mucho 😘"</p>
+                </div>
+                <div class="tarjeta-mensaje">
+                    <h4>👨‍👦 Papá</h4>
+                    <p>"Hola hijito, mi Negrito Hermoso hoy quiero saludarle con mucha alegría
+                        y darle gracias por ser un hijo bueno que Diosito me regalo a la vez deseo felicitarle por ser
+                        su día de cumpleaños
+                        que lo pase de lo mejor junto a sus seres queridos. Recuerdo hijito lo mucho que lo quiero y
+                        siempre estará en mi mente y mi corazón Feliz cumpleaños Mi Negrito."</p>
+                </div>
+                <div class="tarjeta-mensaje">
+                    <h4>👧 Hermana</h4>
+                    <p>"Hola Vaca Lolaaaa, feliz cumpleaños, ya cada día más veterano y cerca del 30 muajajaja, te
+                        quiero mucho que sigas cumpliendo muchas años más, los mejores deseos para ti, de parte mia y de
+                        Pechuga 😽"</p>
+                </div>
+                <div class="tarjeta-mensaje especial">
+                    <h4>❤️ Yo</h4>
+                    <p>"Erick de mi corazón, gracias por ser mi compañero de aventuras y mi gran amor. Te deseo lo
+                        mejor, desde lo más profundo de mi corazón quiero verte triunfar, cumplir tus sueños y ser muy
+                        feliz. Espero podamos seguir compartiendo la vida juntos. ¡Te amo con todo mi corazón!"</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="sorpresa-regalo" class="sorpresa-contenido oculto">
+            <h3>Tu regalo de cumpleaños</h3>
+            <img src="img/Captura.PNG" alt="Mi Regalo para ti" class="img-regalo" onclick="abrirModalRegalo(this.src)"
+                style="cursor: pointer;">
+        </div>
+
+    </section>
+
+
+    <audio id="musica" loop>
+        <source src="music/cumple.mp3" type="audio/mp3">
+    </audio>
+    <footer>
+        <p>
+            !Feliz vuelta al sol mi amor ❤️! Que viva y beba el cumpleaño jaja, te amo. </p>
+    </footer>
+
+    <div class="estrellas-container"></div>
+
+    <script src="JS/script5.js"></script>
+
+    <div id="modal-regalo" class="modal-regalo oculto">
+        <span class="cerrar-modal" onclick="cerrarModalRegalo()">&times;</span>
+        <img id="img-regalo-ampliada" class="modal-img-contenido" src="">
+    </div>
+</body>
+
+</html>
