@@ -140,7 +140,7 @@ button:hover { background: #ff1a66; transform: scale(1.05); }
 }
 
 .elemento-flotante img {
-    width: 150px; height: 100%; object-fit: cover; 
+    width: 150px; height: auto; object-fit: contain; 
     border-radius: 15px; border: 1px solid #f3ebee;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
