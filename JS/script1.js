@@ -32,7 +32,7 @@ const imagenes = [
     "img/familia/foto4.jpeg",
     "img/familia/foto5.jpeg",
     "img/familia/foto6.jpeg",
-    "img/familia/foto7.jpeg",
+    "img/familia/foto7.jpeg"
 ];
 
 setInterval(() => {
