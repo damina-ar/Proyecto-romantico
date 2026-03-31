@@ -26,13 +26,13 @@ crearEstrellas();
 /* --- IMÁGENES FLOTANTES --- */
 // Reemplaza esto con las rutas de las fotos reales que tengas guardadas en tu carpeta del proyecto
 const imagenes = [
-    "IMG/familia/foto1.jpeg",
-    "IMG/familia/foto2.jpeg",
-    "IMG/familia/foto3.jpeg",
-    "IMG/familia/foto4.jpeg",
-    "IMG/familia/foto5.jpeg",
-    "IMG/familia/foto6.jpeg",
-    "IMG/familia/foto7.jpeg",
+    "img/familia/foto1.jpeg",
+    "img/familia/foto2.jpeg",
+    "img/familia/foto3.jpeg",
+    "img/familia/foto4.jpeg",
+    "img/familia/foto5.jpeg",
+    "img/familia/foto6.jpeg",
+    "img/familia/foto7.jpeg",
 ];
 
 setInterval(() => {
