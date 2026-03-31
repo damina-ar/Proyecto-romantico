@@ -30,7 +30,7 @@ const imagenes = [
     "./img/familia/foto2.jpeg",
     "./img/familia/foto3.jpeg",
     "./img/familia/foto4.jpeg",
-    "img/familia/foto5.jpeg",
+    "./img/familia/foto5.jpeg",
     "./img/familia/foto6.jpeg",
     "./img/familia/foto7.jpeg"
 ];
